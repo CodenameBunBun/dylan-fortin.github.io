@@ -63,7 +63,21 @@
       margin: 0 auto;
       padding: 5rem 1.5rem 3.5rem;
       border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
     }
+    .header-photo {
+      flex-shrink: 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .header-text { flex: 1; }
     header h1 {
       font-size: 2.6rem;
       font-weight: normal;
@@ -283,6 +297,7 @@
     }
 
     @media (max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
       header h1 { font-size: 1.9rem; }
       nav ul { gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; }
       .job-header { flex-direction: column; }
@@ -306,6 +321,8 @@
   </nav>
 
   <header>
+    <img src="professional_shot.jpg" alt="Dylan Fortin" class="header-photo" />
+    <div class="header-text">
     <h1>Dylan Fortin<span>MBA, CTPRP</span></h1>
     <p class="tagline">San Diego, CA &nbsp;·&nbsp; Strategic Risk Leader</p>
     <div class="contact-links">
@@ -321,6 +338,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
+    </div>
     </div>
   </header>
 
